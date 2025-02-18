@@ -1,0 +1,25 @@
+# Use cuda versions
+--extra-index-url https://download.pytorch.org/whl/cu118
+	# --find-links doesn't work
+torch==2.5.1
+#torchaudio==2.5.1
+torchvision==0.20.1
+
+scikit-learn==1.5.2
+matplotlib==3.9.2
+numpy
+pandas==2.2.3
+pytorch-lightning==2.4.0
+lightning==2.4.0
+tensorboardx==2.6.2.2
+tensorflow==2.17.0
+seaborn==0.13.2
+# jupyter convert to python
+nbconvert==7.16.4
+jupyter==1.1.1
+# make terminal execution not fail (display)
+IPython==8.28.0
+wandb==0.18.5
+# It is strongly recommended to install `accelerate` for faster and less memory-intense model loading. You can do so with: 
+accelerate==1.1.1 
+python-dotenv==1.0.1
