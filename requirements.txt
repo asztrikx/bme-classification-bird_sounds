@@ -23,3 +23,6 @@ wandb==0.18.5
 # It is strongly recommended to install `accelerate` for faster and less memory-intense model loading. You can do so with: 
 accelerate==1.1.1 
 python-dotenv==1.0.1
+# Audio processing
+librosa==0.10.2.post1
+opencv-python==4.11.0.86

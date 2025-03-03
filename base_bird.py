@@ -57,7 +57,7 @@ def process_sound_file(file_path, label, segment_length=3, sr=22050, n_mels=128,
 data = []
 file_path = "/content/XC163889.ogg"
 label = "sparrow"
-data.extend(process_sound_file(file_path, label))
+data.append(process_sound_file(file_path, label))
 df = pd.DataFrame(data, columns=["spectrogram_path", "label"])
 '''
 
