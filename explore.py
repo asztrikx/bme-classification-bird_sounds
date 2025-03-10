@@ -85,11 +85,11 @@ def gather_length_and_size(directory, metadata_file='data/train_metadata.csv'):
     metadata_csv['file_size'] = audio_file_sizes
 
     # Save the updated metadata CSV
-    metadata_csv.to_csv('train_metadata_updated.csv', index=False)
+    metadata_csv.to_csv('data/train_metadata_updated.csv', index=False)
 
     print(metadata_csv.head()) 
 
 
 
 if __name__ == "__main__":
-    gather_length_and_size('/home/dszarvas/projects/bme-classification-bird_sounds/data/train_audio')
+    gather_length_and_size('data/train_audio')
