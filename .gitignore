@@ -2,3 +2,4 @@
 data/
 *.ogg
 !data/.gitkeep
+!data/train_metadata_updated.csv
