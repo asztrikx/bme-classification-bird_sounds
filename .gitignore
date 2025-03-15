@@ -4,3 +4,6 @@ data/
 !data/.gitkeep
 !data/train_metadata_updated.csv
 !data/train_spectrogram.csv
+lightning_logs
+wandb
+nohup.out
