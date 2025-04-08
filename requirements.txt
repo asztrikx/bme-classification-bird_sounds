@@ -28,3 +28,5 @@ librosa==0.10.2.post1
 opencv-python==4.11.0.86
 # Data analysis
 pydub==0.25.1
+# App
+gradio==5.23.3
