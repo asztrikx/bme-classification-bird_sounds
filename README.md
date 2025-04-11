@@ -23,11 +23,11 @@ Download dataset from [BirdCLEF 2024](https://www.kaggle.com/competitions/birdcl
 
 Copy `.env.template` and rename it to `.env` and fill out the values for your wandb account
 
-Run `data_exploration.ipynb` to
+First run `data_exploration.ipynb` to
 - view data analysis
 - trim dataset based on data analysis
 
-Run `main.ipynb` to
+Then run `main.ipynb` to
 - create spectrograms (and view them) from the remaining audios
 - train on them
 - run evaluations
