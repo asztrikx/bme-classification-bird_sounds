@@ -1,0 +1,32 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.5.1-cuda11.8-cudnn9-runtime
+
+# No caching 🙃
+
+%environment
+    export IN_DOCKER=1
+
+%post
+    cd /app
+
+	# Fix permissions being set to root. Running the container will receive
+	# the *current* users PID and name, so its not deterministic 🙃
+	chmod -R a+rwx ./
+
+    pip install --upgrade pip
+    pip install -r /app/requirements.txt
+
+    # Convert notebook to .py to execute in terminal
+    jupyter nbconvert --to script /app/main.ipynb --output /app/main
+
+%files
+    data/train_spectrogram /app/data/train_spectrogram
+    data/train_metadata_updated.csv /app/data/train_metadata_updated.csv
+    data/train_spectrogram.csv /app/data/train_spectrogram.csv
+    requirements.txt /app/requirements.txt
+    .env /app/.env
+    main.ipynb /app/main.ipynb
+
+%runscript
+    cd /app
+	ipython main.py

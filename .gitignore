@@ -8,3 +8,5 @@ lightning_logs
 wandb
 nohup.out
 models/
+Singularity.sif
+main.py

@@ -32,3 +32,18 @@ Then run `main.ipynb` to
 - train on them
 - run evaluations
 - see application
+
+# To run on Komondor HPC
+Set `is_gradio_on` to `False` in `main.ipynb`
+
+Build sif on your computer
+- `singularity build --fakeroot Singularity.sif Singularity.def`
+
+Copy files to HPC & Run
+- `scp .sbatch komondor:~/nr_haml2025_scratch`
+- `scp Singularity.sif komondor:~/nr_haml2025_scratch`
+  
+Run on HPC:
+- `mkdir ~/models`
+- `chmod u+x .sbatch`
+- `sbatch .sbatch`
